@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Khandani Expert - Dr. Mohd Shamshad BHMS | Malerkotla, Punjab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --primary: #1e40af;
+    --primary-light: #2563eb;
+    --primary-dark: #1e3a8a;
+    --accent: #0ea5e9;
+    --green: #10b981;
+    --whatsapp: #25D366;
+    --dark: #0f172a;
+    --gray: #64748b;
+    --light: #f8fafc;
+    --white: #ffffff;
+    --shadow: 0 10px 40px rgba(30, 64, 175, 0.08);
+    --shadow-lg: 0 20px 60px rgba(30, 64, 175, 0.15);
+  }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+    background: var(--white);
+  }
+  h1, h2, h3, h4 { font-family: 'Playfair Display', serif; line-height: 1.2; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+  /* Top Bar */
+  .top-bar {
+    background: linear-gradient(90deg, var(--primary-dark), var(--primary));
+    color: var(--white);
+    padding: 10px 0;
+    font-size: 14px;
+  }
+  .top-bar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .top-bar a { color: var(--white); text-decoration: none; margin-left: 20px; transition: opacity .3s; }
+  .top-bar a:hover { opacity: .8; }
+  .top-bar i { margin-right: 6px; color: var(--accent); }
+
+  /* Navigation */
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--white);
+    box-shadow: 0 2px 20px rgba(0,0,0,.05);
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .logo-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 22px;
+    box-shadow: var(--shadow);
+  }
+  .logo-text h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--primary-dark);
+  }
+  .logo-text p {
+    font-size: 11px;
+    color: var(--gray);
+    font-weight: 500;
+  }
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    align-items: center;
+  }
+  .nav-links a {
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: 500;
+    font-size: 15px;
+    position: relative;
+    transition: color .3s;
+  }
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary);
+    transition: width .3s;
+  }
+  .nav-links a:hover { color: var(--primary); }
+  .nav-links a:hover::after { width: 100%; }
+  .btn-appoint {
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    color: var(--white) !important;
+    padding: 10px 22px;
+    border-radius: 50px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(30, 64, 175, .3);
+  }
+  .btn-appoint::after { display: none; }
+  .btn-appoint:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(30, 64, 175, .4); }
+  .menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--primary);
+    background: none;
+    border: none;
+  }
+
+  /* Hero */
+  .hero {
+    position: relative;
+    padding: 80px 0 100px;
+    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(14, 165, 233, .15), transparent 70%);
+    border-radius: 50%;
+  }
+  .hero .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+  }
+  .hero-content .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--white);
+    color: var(--primary);
+    padding: 8px 18px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    box-shadow: var(--shadow);
+  }
+  .hero-content h1 {
+    font-size: 52px;
+    color: var(--primary-dark);
+    margin-bottom: 15px;
+  }
+  .hero-content h1 span {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .hero-content .subtitle {
+    font-size: 20px;
+    color: var(--gray);
+    margin-bottom: 25px;
+    font-weight: 500;
+  }
+  .hero-content p {
+    font-size: 16px;
+    color: var(--gray);
+    margin-bottom: 30px;
+    max-width: 500px;
+  }
+  .hero-buttons { display: flex; gap: 15px; flex-wrap: wrap; }
+  .btn {
+    padding: 14px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all .3s;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+  }
+  .btn-primary {
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    color: var(--white);
+    box-shadow: 0 8px 25px rgba(30, 64, 175, .3);
+  }
+  .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(30, 64, 175, .4); }
+  .btn-outline {
+    background: var(--white);
+    color: var(--primary);
+    border: 2px solid var(--primary);
+  }
+  .btn-outline:hover { background: var(--primary); color: var(--white); }
+  .btn-whatsapp {
+    background: linear-gradient(135deg, var(--whatsapp), #128C7E);
+    color: var(--white);
+    box-shadow: 0 8px 25px rgba(37, 211, 102, .3);
+  }
+  .btn-whatsapp:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(37, 211, 102, .4); }
+
+  .hero-image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+  .hero-image img {
+    width: 100%;
+    max-width: 480px;
+    border-radius: 30px;
+    box-shadow: var(--shadow-lg);
+    position: relative;
+    z-index: 2;
+  }
+  .hero-image::before {
+    content: '';
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    border-radius: 30px;
+    top: 20px;
+    right: -20px;
+    z-index: 1;
+  }
+  .floating-card {
+    position: absolute;
+    background: var(--white);
+    padding: 15px 20px;
+    border-radius: 15px;
+    box-shadow: var(--shadow-lg);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 3;
+    animation: float 3s ease-in-out infinite;
+  }
+  .floating-card.card-1 { top: 10%; left: -10%; }
+  .floating-card.card-2 { bottom: 15%; right: -10%; animation-delay: 1.5s; }
+  .floating-card .icon-circle {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 18px;
+  }
+  .floating-card h4 { font-family: 'Poppins', sans-serif; font-size: 14px; color: var(--dark); }
+  .floating-card p { font-size: 12px; color: var(--gray); }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  /* Stats */
+  .stats {
+    background: var(--white);
+    padding: 40px 0;
+    margin-top: -50px;
+    position: relative;
+    z-index: 5;
+  }
+  .stats .container {
+    background: var(--white);
+    border-radius: 20px;
+    box-shadow: var(--shadow-lg);
+    padding: 40px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+  }
+  .stat-item { text-align: center; border-right: 1px solid #e2e8f0; }
+  .stat-item:last-child { border-right: none; }
+  .stat-item h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 42px;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .stat-item p { color: var(--gray); font-weight: 500; margin-top: 5px; }
+
+  /* Sections */
+  section { padding: 80px 0; }
+  .section-header { text-align: center; margin-bottom: 60px; }
+  .section-header .tag {
+    display: inline-block;
+    background: #dbeafe;
+    color: var(--primary);
+    padding: 6px 18px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .section-header h2 {
+    font-size: 42px;
+    color: var(--primary-dark);
+    margin-bottom: 15px;
+  }
+  .section-header p {
+    color: var(--gray);
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 16px;
+  }
+
+  /* About */
+  .about { background: var(--light); }
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+  .about-image {
+    position: relative;
+  }
+  .about-image img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: var(--shadow-lg);
+  }
+  .experience-badge {
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: var(--white);
+    padding: 25px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: var(--shadow-lg);
+  }
+  .experience-badge h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+  }
+  .experience-badge p { font-size: 13px; font-weight: 500; }
+  .about-content h2 {
+    font-size: 38px;
+    color: var(--primary-dark);
+    margin-bottom: 20px;
+  }
+  .about-content .highlight {
+    color: var(--primary);
+    font-weight: 600;
+  }
+  .about-content p {
+    color: var(--gray);
+    margin-bottom: 15px;
+    font-size: 15px;
+  }
+  .about-features {
+    list-style: none;
+    margin-top: 25px;
+  }
+  .about-features li {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--dark);
+    font-weight: 500;
+  }
+  .about-features li i {
+    width: 28px;
+    height: 28px;
+    background: #dbeafe;
+    color: var(--primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+  }
+
+  /* Services */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+  .service-card {
+    background: var(--white);
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    transition: all .4s;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+  }
+  .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .4s;
+  }
+  .service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+  }
+  .service-card:hover::before { transform: scaleX(1); }
+  .service-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    color: var(--primary);
+    margin-bottom: 20px;
+    transition: all .4s;
+  }
+  .service-card:hover .service-icon {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: var(--white);
+    transform: rotateY(360deg);
+  }
+  .service-card h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    color: var(--primary-dark);
+    margin-bottom: 12px;
+  }
+  .service-card p {
+    color: var(--gray);
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  /* Why Choose */
+  .why-choose {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+    color: var(--white);
+    position: relative;
+    overflow: hidden;
+  }
+  .why-choose::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(255,255,255,.1), transparent 70%);
+    border-radius: 50%;
+  }
+  .why-choose .section-header h2 { color: var(--white); }
+  .why-choose .section-header p { color: rgba(255,255,255,.8); }
+  .why-choose .tag { background: rgba(255,255,255,.15); color: var(--white); }
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    position: relative;
+    z-index: 2;
+  }
+  .why-card {
+    text-align: center;
+    padding: 30px 20px;
+    background: rgba(255,255,255,.05);
+    border: 1px solid rgba(255,255,255,.1);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    transition: all .3s;
+  }
+  .why-card:hover {
+    background: rgba(255,255,255,.1);
+    transform: translateY(-5px);
+  }
+  .why-card i {
+    font-size: 40px;
+    color: var(--accent);
+    margin-bottom: 15px;
+  }
+  .why-card h4 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  .why-card p {
+    font-size: 14px;
+    color: rgba(255,255,255,.8);
+  }
+
+  /* Contact */
+  .contact { background: var(--light); }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+  .contact-info {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+  }
+  .contact-info h3 {
+    font-size: 28px;
+    color: var(--primary-dark);
+    margin-bottom: 20px;
+  }
+  .contact-item {
+    display: flex;
+    gap: 15px;
+    padding: 18px 0;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  .contact-item:last-child { border-bottom: none; }
+  .contact-item .icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+  .contact-item h4 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: var(--gray);
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+  .contact-item p, .contact-item a {
+    color: var(--dark);
+    font-weight: 600;
+    font-size: 16px;
+    text-decoration: none;
+  }
+  .contact-item a:hover { color: var(--primary); }
+  .contact-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+  }
+  .map-container {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    min-height: 400px;
+  }
+  .map-container iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    border: 0;
+  }
+
+  /* Footer */
+  footer {
+    background: var(--dark);
+    color: var(--white);
+    padding: 60px 0 20px;
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+  }
+  .footer-col h4 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: var(--white);
+  }
+  .footer-col p, .footer-col a {
+    color: rgba(255,255,255,.7);
+    text-decoration: none;
+    font-size: 14px;
+    display: block;
+    padding: 5px 0;
+    transition: color .3s;
+  }
+  .footer-col a:hover { color: var(--accent); }
+  .footer-col .logo-text h1 { color: var(--white); }
+  .footer-col .logo-text p { color: rgba(255,255,255,.6); }
+  .social-links {
+    display: flex;
+    gap: 12px;
+    margin-top: 15px;
+  }
+  .social-links a {
+    width: 40px;
+    height: 40px;
+    background: rgba(255,255,255,.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    transition: all .3s;
+  }
+  .social-links a:hover {
+    background: var(--primary);
+    transform: translateY(-3px);
+  }
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,.1);
+    padding-top: 20px;
+    text-align: center;
+    color: rgba(255,255,255,.6);
+    font-size: 14px;
+  }
+
+  /* WhatsApp Float */
+  .whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+  }
+  .whatsapp-tooltip {
+    background: var(--white);
+    padding: 12px 18px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-lg);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--dark);
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all .3s;
+    pointer-events: none;
+    white-space: nowrap;
+  }
+  .whatsapp-float:hover .whatsapp-tooltip {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .whatsapp-btn {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--whatsapp), #128C7E);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 28px;
+    text-decoration: none;
+    box-shadow: 0 10px 30px rgba(37, 211, 102, .4);
+    transition: all .3s;
+    animation: pulse 2s infinite;
+  }
+  .whatsapp-btn:hover { transform: scale(1.1); }
+  @keyframes pulse {
+    0%, 100% { box-shadow: 0 10px 30px rgba(37, 211, 102, .4); }
+    50% { box-shadow: 0 10px 30px rgba(37, 211, 102, .7), 0 0 0 15px rgba(37, 211, 102, 0); }
+  }
+
+  /* Responsive */
+  @media (max-width: 992px) {
+    .hero .container, .about-grid, .contact-grid { grid-template-columns: 1fr; }
+    .hero-content h1 { font-size: 40px; }
+    .stats .container { grid-template-columns: repeat(2, 1fr); }
+    .services-grid { grid-template-columns: repeat(2, 1fr); }
+    .why-grid { grid-template-columns: repeat(2, 1fr); }
+    .footer-grid { grid-template-columns: repeat(2, 1fr); }
+    .hero-image { order: -1; }
+    .hero-image::before { display: none; }
+    .floating-card { display: none; }
+  }
+  @media (max-width: 768px) {
+    .menu-toggle { display: block; }
+    .nav-links {
+      position: fixed;
+      top: 70px;
+      left: 0;
+      right: 0;
+      background: var(--white);
+      flex-direction: column;
+      padding: 20px;
+      gap: 15px;
+      box-shadow: var(--shadow);
+      transform: translateY(-150%);
+      transition: transform .3s;
+    }
+    .nav-links.active { transform: translateY(0); }
+    .hero { padding: 40px 0 60px; }
+    .hero-content h1 { font-size: 32px; }
+    .section-header h2 { font-size: 30px; }
+    .services-grid, .why-grid { grid-template-columns: 1fr; }
+    .stats .container { grid-template-columns: 1fr; padding: 25px; }
+    .stat-item { border-right: none; border-bottom: 1px solid #e2e8f0; padding-bottom: 15px; }
+    .stat-item:last-child { border-bottom: none; }
+    .footer-grid { grid-template-columns: 1fr; }
+    .top-bar { font-size: 12px; }
+    .top-bar .container { justify-content: center; text-align: center; }
+    .experience-badge { right: 10px; padding: 15px; }
+    .experience-badge h3 { font-size: 24px; }
+    .contact-info { padding: 25px; }
+    .whatsapp-float { bottom: 20px; right: 20px; }
+    .whatsapp-btn { width: 55px; height: 55px; font-size: 24px; }
+  }
+
+  /* Animations */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all .8s;
+  }
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+</head>
+<body>
+
+<!-- Top Bar -->
+<div class="top-bar">
+  <div class="container">
+    <div><i class="fas fa-clock"></i> Mon - Sat: 9:00 AM - 9:00 PM | Sunday: Closed</div>
+    <div>
+      <a href="tel:9515954518"><i class="fas fa-phone"></i> 9515954518</a>
+      <a href="mailto:contact@khandaniexpert.com"><i class="fas fa-envelope"></i> Contact Us</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header>
+  <div class="container">
+    <nav>
+      <div class="logo">
+        <div class="logo-icon"><i class="fas fa-staff-snake"></i></div>
+        <div class="logo-text">
+          <h1>Khandani Expert</h1>
+          <p>Dr. Mohd Shamshad BHMS</p>
+        </div>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#why">Why Us</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="https://wa.me/919515954518" class="btn-appoint" target="_blank">Book Appointment</a></li>
+      </ul>
+      <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero-content fade-in">
+      <div class="badge"><i class="fas fa-award"></i> Trusted BHMS Specialist from Malerkotla, Punjab</div>
+      <h1>Expert Care for <span>Nerve & Bone</span> Health</h1>
+      <p class="subtitle">Dr. Mohd Shamshad — BHMS</p>
+      <p>Specialized in treating Nerve Settings, Bone Settings, Cervical Migraine, Sleep Disc, CITKA and Joint Pain — <strong>without physiotherapy, operation, or massage.</strong> Traditional expertise with modern care.</p>
+      <div class="hero-buttons">
+        <a href="https://wa.me/919515954518" class="btn btn-whatsapp" target="_blank"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+        <a href="tel:9515954518" class="btn btn-outline"><i class="fas fa-phone"></i> Call Now</a>
+      </div>
+    </div>
+    <div class="hero-image fade-in">
+      <img src="https://lh3.googleusercontent.com/d/16Sjhh-ELiP8xFOJG1Dt2oE3kogOXD2Tb" alt="Dr. Mohd Shamshad BHMS">
+      <div class="floating-card card-1">
+        <div class="icon-circle"><i class="fas fa-user-md"></i></div>
+        <div>
+          <h4>BHMS Certified</h4>
+          <p>Qualified Specialist</p>
+        </div>
+      </div>
+      <div class="floating-card card-2">
+        <div class="icon-circle"><i class="fas fa-heart-pulse"></i></div>
+        <div>
+          <h4>1000+ Patients</h4>
+          <p>Successfully Treated</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stats -->
+<div class="stats">
+  <div class="container">
+    <div class="stat-item fade-in">
+      <h3>15+</h3>
+      <p>Years Experience</p>
+    </div>
+    <div class="stat-item fade-in">
+      <h3>1000+</h3>
+      <p>Happy Patients</p>
+    </div>
+    <div class="stat-item fade-in">
+      <h3>6+</h3>
+      <p>Specializations</p>
+    </div>
+    <div class="stat-item fade-in">
+      <h3>100%</h3>
+      <p>Non-Surgical</p>
+    </div>
+  </div>
+</div>
+
+<!-- About -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-image fade-in">
+        <img src="https://image.qwenlm.ai/public_source/174b997b-b0a3-4901-8644-59e68a30e811/1292f7a44-f1aa-4aad-82f1-fbf988b8fb3d.png" alt="Clinic">
+        <div class="experience-badge">
+          <h3>15+</h3>
+          <p>Years of<br>Experience</p>
+        </div>
+      </div>
+      <div class="about-content fade-in">
+        <span class="tag" style="display:inline-block;background:#dbeafe;color:var(--primary);padding:6px 18px;border-radius:50px;font-size:13px;font-weight:600;margin-bottom:15px;">ABOUT THE DOCTOR</span>
+        <h2>Meet Dr. Mohd Shamshad</h2>
+        <p><span class="highlight">Khandani Expert Dr. Mohd Shamshad BHMS</span> is a renowned specialist from Malerkotla, Punjab, with over 15 years of experience in treating nerve and bone-related conditions using traditional and effective methods.</p>
+        <p>His unique approach focuses on <strong>natural healing without surgery, physiotherapy, or massage</strong>, making him a trusted name for patients seeking safe and effective treatment for chronic pain conditions.</p>
+        <ul class="about-features">
+          <li><i class="fas fa-check"></i> BHMS Certified Medical Professional</li>
+          <li><i class="fas fa-check"></i> Specialized in Non-Surgical Treatments</li>
+          <li><i class="fas fa-check"></i> Traditional Khandani Expertise</li>
+          <li><i class="fas fa-check"></i> Personalized Patient Care</li>
+          <li><i class="fas fa-check"></i> Proven Track Record of Success</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="tag">Our Specializations</span>
+      <h2>Expert Treatment Services</h2>
+      <p>Comprehensive care for nerve, bone, and joint conditions using time-tested traditional methods</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card fade-in">
+        <div class="service-icon"><i class="fas fa-brain"></i></div>
+        <h3>Nerve Settings</h3>
+        <p>Expert diagnosis and treatment of nerve-related disorders using specialized traditional techniques for complete relief.</p>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-icon"><i class="fas fa-bone"></i></div>
+        <h3>Bone Settings</h3>
+        <p>Traditional bone setting methods for fractures, dislocations, and bone alignment issues without surgical intervention.</p>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-icon"><i class="fas fa-head-side-virus"></i></div>
+        <h3>Cervical Migraine</h3>
+        <p>Specialized treatment for cervical-related migraines and headaches, addressing root causes for long-term relief.</p>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-icon"><i class="fas fa-bed-pulse"></i></div>
+        <h3>Sleep Disc</h3>
+        <p>Expert care for slipped disc and sleep disc problems with non-surgical, effective traditional treatment methods.</p>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-icon"><i class="fas fa-hand-fist"></i></div>
+        <h3>CITKA Treatment</h3>
+        <p>Specialized traditional treatment for CITKA conditions using proven ancestral methods passed down through generations.</p>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-icon"><i class="fas fa-person-walking"></i></div>
+        <h3>Joints Pain Expert</h3>
+        <p>Comprehensive joint pain treatment without physiotherapy, operation, or massage — natural healing at its best.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why Choose -->
+<section class="why-choose" id="why">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="tag">Why Choose Us</span>
+      <h2>What Makes Us Different</h2>
+      <p>Experience the difference of traditional expertise combined with modern medical understanding</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card fade-in">
+        <i class="fas fa-hand-holding-medical"></i>
+        <h4>No Surgery</h4>
+        <p>100% non-surgical treatment approach for all conditions</p>
+      </div>
+      <div class="why-card fade-in">
+        <i class="fas fa-spa"></i>
+        <h4>No Physiotherapy</h4>
+        <p>Effective results without the need for physiotherapy sessions</p>
+      </div>
+      <div class="why-card fade-in">
+        <i class="fas fa-hands"></i>
+        <h4>No Massage</h4>
+        <p>Specialized techniques that work without massage therapy</p>
+      </div>
+      <div class="why-card fade-in">
+        <i class="fas fa-shield-heart"></i>
+        <h4>Safe & Natural</h4>
+        <p>Traditional methods with proven safety and effectiveness</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="tag">Get In Touch</span>
+      <h2>Visit Our Clinic</h2>
+      <p>Book your appointment today and start your journey to better health</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info fade-in">
+        <h3>Contact Information</h3>
+        <div class="contact-item">
+          <div class="icon"><i class="fas fa-location-dot"></i></div>
+          <div>
+            <h4>Clinic Address</h4>
+            <p>H211039, Kachiguda, Amberpet Road, Krishna Nager, Near Ambedkar Statue Ground, Hyderabad - 500027</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="icon"><i class="fas fa-phone"></i></div>
+          <div>
+            <h4>Phone / WhatsApp</h4>
+            <a href="tel:9515954518">+91 9515954518</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="icon"><i class="fas fa-clock"></i></div>
+          <div>
+            <h4>Working Hours</h4>
+            <p>Mon - Sat: 9:00 AM - 9:00 PM</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="icon"><i class="fas fa-user-doctor"></i></div>
+          <div>
+            <h4>Doctor</h4>
+            <p>Dr. Mohd Shamshad (BHMS)</p>
+          </div>
+        </div>
+        <div class="contact-buttons">
+          <a href="https://wa.me/919515954518" class="btn btn-whatsapp" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+          <a href="tel:9515954518" class="btn btn-primary"><i class="fas fa-phone"></i> Call Now</a>
+        </div>
+      </div>
+      <div class="map-container fade-in">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.0!2d78.5!3d17.4!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTfCsDI0JzAwLjAiTiA3OMKwMzAnMDAuMCJF!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="logo" style="margin-bottom:15px;">
+          <div class="logo-icon"><i class="fas fa-staff-snake"></i></div>
+          <div class="logo-text">
+            <h1>Khandani Expert</h1>
+            <p>Dr. Mohd Shamshad BHMS</p>
+          </div>
+        </div>
+        <p>Trusted BHMS specialist from Malerkotla, Punjab offering expert treatment for nerve, bone, and joint conditions using traditional non-surgical methods.</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/919515954518" target="_blank"><i class="fab fa-whatsapp"></i></a>
+          <a href="tel:9515954518"><i class="fas fa-phone"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="#services">Nerve Settings</a>
+        <a href="#services">Bone Settings</a>
+        <a href="#services">Cervical Migraine</a>
+        <a href="#services">Sleep Disc</a>
+        <a href="#services">Joints Pain</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p><i class="fas fa-location-dot" style="color:var(--accent);margin-right:8px;"></i> Kachiguda, Hyderabad - 500027</p>
+        <p><i class="fas fa-phone" style="color:var(--accent);margin-right:8px;"></i> +91 9515954518</p>
+        <p><i class="fas fa-clock" style="color:var(--accent);margin-right:8px;"></i> Mon-Sat: 9AM - 9PM</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Khandani Expert - Dr. Mohd Shamshad BHMS. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp Floating Button -->
+<div class="whatsapp-float">
+  <div class="whatsapp-tooltip"> Chat with us on WhatsApp!</div>
+  <a href="https://wa.me/919515954518?text=Hello%20Dr.%20Shamshad,%20I%20would%20like%20to%20book%20an%20appointment." class="whatsapp-btn" target="_blank" aria-label="WhatsApp Chat">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+</div>
+
+<script>
+  // Mobile Menu Toggle
+  const menuToggle = document.getElementById('menuToggle');
+  const navLinks = document.getElementById('navLinks');
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    const icon = menuToggle.querySelector('i');
+    icon.classList.toggle('fa-bars');
+    icon.classList.toggle('fa-times');
+  });
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+      const icon = menuToggle.querySelector('i');
+      icon.classList.add('fa-bars');
+      icon.classList.remove('fa-times');
+    });
+  });
+
+  // Scroll Animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  // Counter Animation
+  const counters = document.querySelectorAll('.stat-item h3');
+  const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const target = entry.target;
+        const text = target.innerText;
+        const num = parseInt(text);
+        const suffix = text.replace(/[0-9]/g, '');
+        let current = 0;
+        const increment = num / 50;
+        const timer = setInterval(() => {
+          current += increment;
+          if (current >= num) {
+            target.innerText = num + suffix;
+            clearInterval(timer);
+          } else {
+            target.innerText = Math.floor(current) + suffix;
+          }
+        }, 30);
+        counterObserver.unobserve(target);
+      }
+    });
+  }, { threshold: 0.5 });
+  counters.forEach(counter => counterObserver.observe(counter));
+</script>
+
+</body>
+</html>
